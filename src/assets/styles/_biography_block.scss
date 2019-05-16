@@ -1,0 +1,12 @@
+.biography__block {
+    @apply my-6;
+}
+
+.biography__block h3,
+.biography__block h4 {
+    @apply text-center;
+}
+
+.biography__block article {
+    @apply mt-4;
+}

@@ -1,0 +1,39 @@
+#app {
+    @apply w-screen;
+    @apply min-h-screen;
+    @apply flex;
+}
+
+// site sidebar
+.site__sidebar {
+    width: 15rem;
+    @apply py-8;
+    @apply px-6;
+    @apply shadow-lg;
+}
+
+.site__sidebar nav ul li:not(:last-child) {
+    @apply mb-3;
+}
+
+.site__sidebar li a {
+    @apply block;
+    @apply uppercase;
+    @apply text-sm;
+}
+
+// site content
+.site__content {
+    width: 40rem;
+}
+
+// site background
+.site__background {
+    @apply flex-grow;
+}
+
+// page content
+.page__content {
+    @apply py-10;
+    @apply px-8;
+}

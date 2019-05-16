@@ -1,0 +1,11 @@
+.audio__block {
+    @apply text-center;
+}
+
+.audio__block h5 {
+    @apply mb-4;
+}
+
+.audio__block audio {
+    @apply w-full;
+}

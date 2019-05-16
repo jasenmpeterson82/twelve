@@ -1,0 +1,13 @@
+.rotating__quotes {
+    @apply bg-gray-900;
+    @apply text-white;
+    @apply py-10;
+    @apply px-8;
+    @apply text-center;
+}
+
+.rotating__quotes p {
+    @apply text-2xl;
+    @apply leading-snug;
+    @apply mb-4;
+}
