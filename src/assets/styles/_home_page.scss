@@ -1,0 +1,19 @@
+.home_page__content .page__copy {
+    @apply text-center;
+}
+
+.home_page__content .page__copy h3 {
+    @apply text-gold;
+}
+
+.home_page__content h3 {
+    @apply italic;
+}
+
+.home_page__content h3:not(:last-of-type) {
+    @apply mb-6;
+}
+
+.home_page__content h3 cite {
+    @apply text-sm;
+}

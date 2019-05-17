@@ -8,7 +8,8 @@ export default new Vuex.Store({
 	state: {
 		siteData: null,
 		pageData: null,
-		pages: []
+		pages: [],
+		pageBackground: null
 	},
 	mutations: {
 		SET_SITE_DATA (state, payload) {
@@ -23,6 +24,9 @@ export default new Vuex.Store({
 		},
 		SET_PAGES_DATA(state, payload) {
 			state.pages.push(payload)
+		},
+		SET_PAGE_BG(state, payload) {
+			state.pageBackground = payload;
 		}
 	},
 	getters: {
@@ -64,6 +68,9 @@ export default new Vuex.Store({
 				acf: pageData.data[0].acf,
 			}
 			commit('SET_PAGE_DATA', page);
+		},
+		SET_PAGE_BG({ commit }, imageURL) {
+			commit('SET_PAGE_BG', imageURL);
 		}
 	}
 })

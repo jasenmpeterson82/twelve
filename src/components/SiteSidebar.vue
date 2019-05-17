@@ -1,5 +1,10 @@
 <template>
     <aside class="site__sidebar">
+        <figure class="site__logo">
+          <router-link to="/" class="block">
+              <img src="@/assets/img/logo.svg" alt="">
+          </router-link>
+        </figure>
         <nav v-if="siteNavigation">
             <ul>
                 <router-link tag="li" v-for="link in sortedMenu" :key="link.slug" :to="link.slug">

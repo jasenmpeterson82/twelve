@@ -1,7 +1,7 @@
 <template>
     <section class="biography__block" v-if="biography">
         <h3>{{biography.title}}</h3>
-        <h4 v-html="biography.bio.subtitle"></h4>
+        <h5 v-html="biography.bio.subtitle"></h5>
         <article>
             <p v-html="biography.bio.biography"></p>
         </article>

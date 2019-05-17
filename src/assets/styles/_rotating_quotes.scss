@@ -1,9 +1,19 @@
 .rotating__quotes {
-    @apply bg-gray-900;
-    @apply text-white;
+    text-shadow: 1px 1px #000000;
     @apply py-10;
     @apply px-8;
     @apply text-center;
+    @apply relative;
+    @apply border-b;
+    @apply border-isabelline;
+    @apply bg-nickel;
+    @apply text-white;
+    @apply mb-12;
+}
+
+.rotating__quotes blockquote {
+    @apply relative;
+    @apply z-20;
 }
 
 .rotating__quotes p {

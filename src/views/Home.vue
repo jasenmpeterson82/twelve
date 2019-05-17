@@ -11,10 +11,13 @@
 	</section>
 
 	<section class="page__content home_page__content">
-		<section class="text-center" v-html="pageCopy"></section>
+		<section class="page__copy" v-html="pageCopy"></section>
 		<BiographyBlock :id="biographyIDs[0]"/>
 		<AudioBlock :id="audioClips[0]" />
 		<BiographyBlock :id="biographyIDs[1]"/>
+		<figure class="text-center mt-16">
+			<button class="btn">Order The Twelve Years a Slave Book</button>
+		</figure>
 	</section>
 	  
 
@@ -40,7 +43,8 @@ export default {
 	},
 	methods: {
 		...mapActions({
-			pageData: 'RETRIEVE_PAGE_DATA'
+			pageData: 'RETRIEVE_PAGE_DATA',
+			setPageBG: 'SET_PAGE_BG'
 		}),
 	},
 	created() {
@@ -64,6 +68,10 @@ export default {
 			// audio clips
 			const audio__clips = componentData.acf.content.filter(audio => audio.hasOwnProperty('audio_module'));
 			this.audioClips.push(audio__clips[0].audio_module);
+
+			// page background
+			const background = componentData.acf.background.url
+			this.setPageBG(background);
 		});
 	},
 	components: {

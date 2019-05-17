@@ -4,25 +4,33 @@
     <main class="site__content">
         <router-view/>
     </main>
-    <pageBackground/>
+    <PageBackground :url="pageBackground"/>
   </div>
 </template>
 <script>
   import { mapActions } from 'vuex';
   import siteSidebar from '@/components/SiteSidebar';
-  import pageBackground from '@/components/PageBackground'
+  import PageBackground from '@/components/PageBackground'
 	export default {
+    name: "App",
 		methods: {
 			...mapActions({
 				siteData: 'RETRIEVE_SITE_DATA'
 			})
-		},
+    },
+    computed: {
+      pageBackground: {
+          get() {
+            return this.$store.state.pageBackground;
+          }
+      }
+    },
 		mounted() {
 			this.siteData();
     },
     components: {
         siteSidebar,
-        pageBackground
+        PageBackground
     }
 	}
 </script>
